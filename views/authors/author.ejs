@@ -1,0 +1,16 @@
+<!--views/authors/index.ejs-->
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>Author: <%= ejsAuthor.first_name %> <%= ejsAuthor.last_name %></h1>
+<div>
+	<h2>Articles by Author:</h2>
+  <ul>
+  	<% ejsAuthor.Articles.forEach(function(article) {  %>
+  	<li><a href="/articles/<%= article.id  %>"><%= article.title  %></a></li>
+  	<% });  %>
+  </ul>
+</div>
+</body>
+</html>
+

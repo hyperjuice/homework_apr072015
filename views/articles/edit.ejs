@@ -1,0 +1,18 @@
+<!--views/articles/new.ejs-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Add an article</h1>
+    <form method="post" action="/articles/<%= article.id %>?_method=PUT">
+      <input type="text" name="article[title]" placeholder="Article title" value="<%= article.title %>"><br />
+      <input type="text" name="article[author]" placeholder="Article author" value="<%= article.author %>"><br />
+      <textarea name="article[content]">
+      	<%= article.content %>
+      </textarea><br />
+      <button>Save </button>
+    </form>
+  </body>
+</html>

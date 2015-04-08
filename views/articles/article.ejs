@@ -1,0 +1,14 @@
+<!--views/articles/index.ejs-->
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>Article: <%= articleToDisplay.title %></h1>
+<div>
+  <ul>
+  	<li>Author: <%= articleToDisplay.Author.first_name  %> <%= articleToDisplay.Author.last_name  %></li>
+  	<li>Content: <%= articleToDisplay.content  %></li>
+  </ul>
+</div>
+</body>
+</html>
+

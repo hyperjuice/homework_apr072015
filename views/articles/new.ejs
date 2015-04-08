@@ -1,0 +1,22 @@
+<!--views/articles/new.ejs-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Add an article</h1>
+    <form method="post" action="/articles">
+      <input type="text" name="article[title]" placeholder="Article title"><br />
+      <select name="article[AuthorId]">
+        <option value="">Select an author...</option>
+        <% ejsAuthors.forEach(function(author) { %>
+          <option value="<%= author.id %>"><%= author.first_name %> <%= author.last_name %></option>
+        <% })  %>
+      </select>
+      <br />
+      <textarea name="article[content]"></textarea><br />
+      <button>Save </button>
+    </form>
+  </body>
+</html>
